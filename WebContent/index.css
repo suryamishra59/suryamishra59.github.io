@@ -1,0 +1,234 @@
+/**
+ *	@author: Surya Deep Mishra
+ */
+@CHARSET "ISO-8859-1";
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#logo-container {
+	top: 0;
+	width: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 3;
+}
+
+#logo {
+	display: block;
+	margin: 0 auto;
+	margin-top: 2.5em;
+	height: 6em;
+}
+
+#header {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	position: fixed;
+	background:
+		url("http://www.timhathaway.com/images/nature_mountain_range_fog_sunrise_landscape_tree_mac_ox_ultrahd_4k_wallpaper_background_3840x2160.jpg")
+		no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#wrapper-overlay {
+	height: 100%;
+	width: 100%;
+	display: table;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 0;
+}
+
+#wrapper-overlay h1 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 100%;
+	color: #ffffff;
+	font-family: 'Mirza', cursive;
+	font-size: 7em;
+	width: 100%;
+}
+
+#wrapper-overlay h1 span {
+	font-family: 'Open Sans', cursive;
+	font-size: 30px;
+	color: #FFF056;
+	text-transform: capitalize;
+}
+
+.content-container {
+	position: absolute;
+	width: 100%;
+	background: white;
+	box-shadow: 0px 0px 15px 2px #000000;
+	z-index: 3;
+	min-height: 200%;
+}
+
+#projects-heading {
+	margin-top: 1em;
+	color: #b0b0b0;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	word-spacing: 3em;
+}
+
+.projects {
+	min-height: 20em;
+	transition: all 0.3s;
+	opacity: 0.5;
+}
+
+.projects-description {
+	padding: 2em;
+}
+
+.projects-head {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.projects-p {
+	font-size: 1.6em;
+	color: #f30;
+	text-align: justify;
+	margin-top: 1em;
+}
+
+.projects:HOVER {
+	background-size: 105% 105% !important;
+	opacity: 1;
+}
+
+#inpandler-img {
+	background: url(images/inpandler.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+#calculator-img {
+	background: url(images/calculator.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+#obs-img {
+	background: url(images/obs.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+#ryr-img {
+	background: url(images/ryr.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+#more-p {
+	text-align: center;
+	margin-top: 4em;
+	font-family: 'Open Sans';
+	font-size: 1.2em;
+	color: #b0b0b0;
+}
+
+#my-img {
+	padding: 0;
+	background: url("images/myimg.jpg") no-repeat center center;
+	background-size: cover;
+	height: 32em;
+}
+
+#img-overlay {
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 51, 0, 0.3);
+	position: absolute;
+}
+
+#my-bio {
+	background:
+		url("https://newevolutiondesigns.com/images/freebies/city-wallpaper-18.jpg")
+		no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 32em;
+	padding: 3em;
+}
+
+#my-bio h2 {
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 53px;
+}
+
+#my-bio span {
+	font-family: 'Open Sans';
+	font-size: 35px;
+}
+
+#my-bio p {
+	font-family: 'Consolas';
+	font-size: 1.5em;
+	font-weight: bold;
+	color: white;
+	text-align: justify;
+	margin-top: 2em;
+}
+
+.footer {
+	padding: 2em;
+	background:
+		url("http://wallpaperdj.com/download/vinyl_strike-1440x900.jpg")
+		no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+.footer h2 {
+	font-family: 'Open Sans';
+	font-size: 3.1em;
+	color: white;
+}
+
+.footer p {
+	font-family: 'Open Sans';
+	font-size: 1.3em;
+	color: white;
+}
+
+.redirect {
+	font-family: 'Open Sans';
+	font-size: 1.5em;
+	text-decoration: none;
+}
+
+.footer span {
+	color: white;
+	text-align: center;
+	font-size: 1em;
+}
+
+@media ( max-width : 768px) {
+	#wrapper-overlay h1 {
+		font-size: 5em;
+	}
+	
+	#wrapper-overlay h1 span {
+		font-size: 20px;
+	}
+}
+
+@supports (-ms-ime-align:auto ) {
+	#header {
+		background-attachment:local !important;
+		position: static;
+	}
+	.content-container {
+		margin-top: 0 !important;
+	}
+}
