@@ -223,7 +223,7 @@ html, body {
 	}
 }
 
-@supports (-ms-ime-align:auto ) {
+/*@supports (-ms-ime-align:auto ) {
 	#header {
 		background-attachment:local !important;
 		position: static;
@@ -231,4 +231,4 @@ html, body {
 	.content-container {
 		margin-top: 0 !important;
 	}
-}
+}*/
