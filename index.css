@@ -7,14 +7,15 @@ html, body {
 	min-height: 100%;
 	height: 100%;
 	overflow-x: hidden;
+	/* overflow-y: hidden; */
 }
 
 #logo-container {
-	top: 0;
+	top: 40%;
 	width: 100%;
 	position: absolute;
 	width: 100%;
-	z-index: 3;
+	z-index: 1000;
 }
 
 #logo {
@@ -29,11 +30,27 @@ html, body {
 	width: 100%;
 	padding: 0;
 	position: fixed;
-	background:
-		url("http://www.timhathaway.com/images/nature_mountain_range_fog_sunrise_landscape_tree_mac_ox_ultrahd_4k_wallpaper_background_3840x2160.jpg")
+	/* background:
+		url("images/headerImg.jpg")
 		no-repeat center center;
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: cover; */
+}
+
+#bgvid {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	/* -webkit-filter: grayscale(); */
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
 }
 
 #wrapper-overlay {
@@ -41,25 +58,31 @@ html, body {
 	width: 100%;
 	display: table;
 	position: absolute;
-	background: rgba(0, 0, 0, 0.5);
+	/* background: rgba(0, 0, 0, 0.5); */
 	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 #wrapper-overlay h1 {
 	display: table-cell;
 	vertical-align: middle;
+	opacity: 0;
+	padding-left: 0;
+	padding-right: 0;
+	background: rgba(0, 0, 0, 0.5);
 	text-align: center;
 	width: 100%;
 	color: #ffffff;
-	font-family: 'Mirza', cursive;
-	font-size: 7em;
+	font-family: 'Slabo 27px', serif;
+	font-size: 6.5em;
 	width: 100%;
 }
 
 #wrapper-overlay h1 span {
 	font-family: 'Open Sans', cursive;
 	font-size: 30px;
-	color: #FFF056;
+	color: #f1d298;
 	text-transform: capitalize;
 }
 
@@ -77,13 +100,14 @@ html, body {
 	color: #b0b0b0;
 	font-family: 'Open Sans';
 	font-weight: bold;
-	word-spacing: 3em;
+	word-spacing: 7em;
 }
 
 .projects {
 	min-height: 20em;
 	transition: all 0.3s;
 	opacity: 0.5;
+	box-shadow: 3px 3px 4px 0px black;
 }
 
 .projects-description {
@@ -91,14 +115,15 @@ html, body {
 }
 
 .projects-head {
-	font-size: 3em;
+	font-size: 2.5em;
+	text-align: center;
 	font-weight: bold;
 }
 
 .projects-p {
-	font-size: 1.6em;
-	color: #f30;
-	text-align: justify;
+	font-size: 1.4em;
+	color: gray;
+	text-align: center;
 	margin-top: 1em;
 }
 
@@ -151,7 +176,7 @@ html, body {
 
 #my-bio {
 	background:
-		url("https://newevolutiondesigns.com/images/freebies/city-wallpaper-18.jpg")
+		url("images/bio-bg.jpg")
 		no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -176,13 +201,13 @@ html, body {
 	font-weight: bold;
 	color: white;
 	text-align: justify;
-	margin-top: 2em;
+	margin-top: 4em;
 }
 
 .footer {
 	padding: 2em;
 	background:
-		url("http://wallpaperdj.com/download/vinyl_strike-1440x900.jpg")
+		url("images/footer-bg.jpg")
 		no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -213,6 +238,16 @@ html, body {
 	font-size: 1em;
 }
 
+::-moz-selection { /* Code for Firefox */
+	color: white;
+	background: #2d2d2d;
+}
+
+::selection {
+	color: white;
+	background: #2d2d2d;
+}
+
 @media ( max-width : 768px) {
 	#wrapper-overlay h1 {
 		font-size: 5em;
@@ -223,12 +258,51 @@ html, body {
 	}
 }
 
-/*@supports (-ms-ime-align:auto ) {
+@supports (-ms-ime-align:auto ) {
 	#header {
-		background-attachment:local !important;
+		background: url("images/header-bg.png") no-repeat center center;
+		background-size: cover;
+		background-attachment: local !important;
 		position: static;
 	}
+
 	.content-container {
 		margin-top: 0 !important;
 	}
-}*/
+	#my-pro-container {
+		padding-left: 6.5em !important;
+		padding-right: 6.5em !important;
+	}
+}
+
+.no-js #loader {
+	display: none;
+}
+
+.js #loader {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 0;
+}
+
+.se-pre-con {
+	text-align: center;
+	display: table;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: #000000;
+}
+
+.se-pre-con label {
+	display: table-cell;
+	vertical-align: middle;
+	/* padding-top: 7em; */
+	font-family: monospace;
+	font-size: 1.9em;
+	text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
