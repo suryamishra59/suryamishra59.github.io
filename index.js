@@ -21,7 +21,6 @@ $(document).ready(function() {
 			'-webkit-filter' : 'grayscale('+greyPercentage+'%)',
 			'filter' : 'grayscale('+greyPercentage+'%)',
 		});
-		console.log(greyPercentage);
 	});
 	
 	if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/))){
