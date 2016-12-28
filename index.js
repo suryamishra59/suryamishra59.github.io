@@ -40,7 +40,9 @@ $(window).on('load', function() {
 			$(".se-pre-con").fadeOut(600, function() {
 				$('#wrapper-overlay h1').animate({
 					'opacity' : '1'
-				}, 800);
+				}, 400, function() {
+					$('html, body').css('overflow-y' , 'auto');
+				});
 			});
 		});
 	});
