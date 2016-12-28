@@ -16,15 +16,32 @@ $(document).ready(function() {
 				'opacity' : (1 - st / limit)
 			});
 		}
+		var greyPercentage = ((st / 370) * 100);
+		$('#bgvid').css({
+			'-webkit-filter' : 'grayscale('+greyPercentage+'%)',
+			'filter' : 'grayscale('+greyPercentage+'%)',
+		});
+		console.log(greyPercentage);
 	});
+	
+	if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/))){
+		alert("Your browsing experience may change with old browsers. It is highly recommend to switch to new browsers see the page as intended.");
+	}
 });
 
-/*$(window).load(function() {
-	$("#wrapper-overlay h1").animate({
-		'opacity' : '1'
-	}, 300, function() {
-		$("#wrapper-overlay h1 span").animate({
-			'opacity' : '1'
-		}, 300);
+// Preloader
+$(window).on('load', function() {
+	$('html, body').animate({
+		scrollTop : 0
+	}, 100, function() {
+		$('#logo-container').animate({
+			'top' : '0'
+		}, 1000, function() {
+			$(".se-pre-con").fadeOut(600, function() {
+				$('#wrapper-overlay h1').animate({
+					'opacity' : '1'
+				}, 800);
+			});
+		});
 	});
-});*/
+});
