@@ -42,9 +42,8 @@ $(window).on('load', function() {
 				}, 400, function() {
 					$('html, body').css('overflow-y' , 'auto');
 					var attachVideo = '<video autoplay="autoplay" loop muted id="bgvid"><source src="images/video-bg2.mp4" type="video/mp4"><source src="images/video-bg2.ogg" type="video/ogg"><source src="images/video-bg2.webm" type="video/webm"></video>';
-					$('#header').load(attachVideo, function(){
-						$(this).css('background' , 'transparent');
-					});
+					$('#header').append(attachVideo);
+					$('#header').css('background' , 'transparent');
 				});
 			});
 		});
