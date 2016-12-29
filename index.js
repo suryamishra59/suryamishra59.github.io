@@ -17,7 +17,7 @@ $(document).ready(function() {
 			});
 		}
 		var greyPercentage = ((st / 370) * 100);
-		$('#bgvid').css({
+		$('#header').css({
 			'-webkit-filter' : 'grayscale('+greyPercentage+'%)',
 			'filter' : 'grayscale('+greyPercentage+'%)',
 		});
