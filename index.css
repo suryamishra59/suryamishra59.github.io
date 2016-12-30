@@ -256,7 +256,7 @@ html, body {
 		font-size: 15px !important;
 	}
 	.projects {
-		min-height: 10em !important;
+		min-height: 11.3em !important;
 	}
 	#logo {
 		height: 3.5em !important;
@@ -267,6 +267,10 @@ html, body {
 
 	#my-bio span {
 		font-size: 25px;
+	}
+	
+	#projects-heading {
+		word-spacing: 0em;
 	}
 
 }
