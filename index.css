@@ -14,7 +14,6 @@ html, body {
 	top: 40%;
 	width: 100%;
 	position: absolute;
-	width: 100%;
 	z-index: 1000;
 }
 
@@ -259,6 +258,10 @@ html, body {
 	.projects {
 		min-height: 10em !important;
 	}
+	#logo {
+		height: 3.5em !important;
+	}
+
 }
 
 @supports (-ms-ime-align:auto ) {
