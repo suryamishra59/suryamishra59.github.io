@@ -261,6 +261,13 @@ html, body {
 	#logo {
 		height: 3.5em !important;
 	}
+	#my-bio h2 {
+		font-size: 40px;
+	}
+
+	#my-bio span {
+		font-size: 25px;
+	}
 
 }
 
