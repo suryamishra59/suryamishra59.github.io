@@ -1,0 +1,376 @@
+/**
+ *	@author: Surya Deep Mishra
+ */
+
+@CHARSET "ISO-8859-1";
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+/* Logo Styles */
+
+#logo-container {
+	top: 40%;
+	width: 100%;
+	position: absolute;
+	z-index: 1000;
+}
+
+#logo {
+	display: block;
+	margin: 0 auto;
+	margin-top: 2.5em;
+	height: 6em;
+}
+
+/* Header */
+
+#header {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	position: fixed;
+	background:
+		url("images/header-bg.png")
+		no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#bgvid {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+#wrapper-overlay {
+	height: 100%;
+	width: 100%;
+	display: table;
+	position: absolute;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#play {
+	position: fixed;
+	height: 8em;
+	width: 8em;
+	bottom: 0;
+	left: 0;
+	opacity: 0.5;
+	cursor: pointer;
+	border-radius: 50%;
+	background: url("images/video-play-button.png") no-repeat center center;
+	background-size: cover;
+	-ms-transform: opacity 0.3s;
+	-moz-transform: opacity 0.3s;
+	-webkit-transform: opacity 0.3s;
+	-o-transform: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+#play:HOVER {
+	opacity: 1;
+}
+
+#wrapper-overlay h1 {
+	display: table-cell;
+	vertical-align: middle;
+	opacity: 0;
+	padding-left: 0;
+	padding-right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	width: 100%;
+	color: #ffffff;
+	font-family: 'Slabo 27px', serif;
+	font-size: 6.5em;
+	width: 100%;
+}
+
+#wrapper-overlay h1 span {
+	font-family: 'Open Sans', cursive;
+	font-size: 30px;
+	color: #f1d298;
+	text-transform: capitalize;
+}
+
+/* Projects container */
+
+.content-container {
+	position: absolute;
+	width: 100%;
+	background: white;
+	box-shadow: 0px 0px 15px 2px #000000;
+	z-index: 3;
+	min-height: 200%;
+}
+
+#projects-heading {
+	margin-top: 1em;
+	color: #b0b0b0;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	word-spacing: 7em;
+}
+
+.projects {
+	min-height: 20em;
+	transition: all 0.3s;
+	opacity: 0.5;
+	box-shadow: 3px 3px 4px 0px black;
+}
+
+.projects:HOVER {
+	background-size: 105% 105% !important;
+	opacity: 1;
+}
+
+.projects-description {
+	padding: 2em;
+}
+
+.projects-head {
+	font-size: 2.5em;
+	text-align: center;
+	font-weight: bold;
+}
+
+.projects-p {
+	font-size: 1.4em;
+	color: gray;
+	text-align: center;
+	margin-top: 1em;
+}
+
+#inpandler-img {
+	background: url(images/inpandler.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+#calculator-img {
+	background: url(images/calculator.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+#obs-img {
+	background: url(images/obs.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+#ryr-img {
+	background: url(images/ryr.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+#more-p {
+	text-align: center;
+	margin-top: 4em;
+	font-family: 'Open Sans';
+	font-size: 1.2em;
+	color: #b0b0b0;
+}
+
+/* My image and bio */
+
+#my-img {
+	padding: 0;
+	background: url("images/myimg.jpg") no-repeat center center;
+	background-size: cover;
+	height: 32em;
+}
+
+#img-overlay {
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 51, 0, 0.3);
+	position: absolute;
+}
+
+#my-bio {
+	background:
+		url("images/bio-bg.jpg")
+		no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 32em;
+	padding: 3em;
+}
+
+#my-bio h2 {
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 53px;
+}
+
+#my-bio span {
+	font-family: 'Open Sans';
+	font-size: 35px;
+}
+
+#my-bio p {
+	font-family: 'Consolas';
+	font-size: 1.5em;
+	font-weight: bold;
+	color: white;
+	text-align: justify;
+	margin-top: 4em;
+}
+
+/* Footer  */
+
+.footer {
+	padding: 2em;
+	background:
+		url("images/footer-bg.jpg")
+		no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+.footer h2 {
+	font-family: 'Open Sans';
+	font-size: 3.1em;
+	color: white;
+}
+
+.footer p {
+	font-family: 'Open Sans';
+	font-size: 1.3em;
+	color: white;
+}
+
+.redirect {
+	font-family: 'Open Sans';
+	font-size: 1.3em;
+	text-decoration: none;
+}
+
+.footer span {
+	color: white;
+	text-align: center;
+	font-size: 1em;
+}
+
+/* Selection color */
+
+::-moz-selection {
+	color: white;
+	background: #2d2d2d;
+}
+
+::selection {
+	color: white;
+	background: #2d2d2d;
+}
+
+/* Responsiveness */
+
+@media ( max-width : 768px) {
+	#wrapper-overlay h1 {
+		font-size: 3em !important;
+	}
+	
+	#wrapper-overlay h1 span {
+		font-size: 15px !important;
+	}
+	.projects {
+		min-height: 10.5em !important;
+	}
+	#logo {
+		height: 3.5em !important;
+	}
+	#my-bio h2 {
+		font-size: 40px;
+	}
+
+	#my-bio span {
+		font-size: 25px;
+	}
+	
+	#projects-heading {
+		word-spacing: 0em;
+	}
+	
+	#bgvid {
+		display: none;
+	}
+	
+	#play {
+		display: none;
+	}
+}
+
+/* For Microsoft Edge */
+
+@supports (-ms-ime-align:auto ) {
+	#header {
+		background: url("images/header-bg.png") no-repeat center center;
+		background-size: cover;
+		background-attachment: local !important;
+		position: static;
+	}
+	
+	#bgvid, #play {
+		display: none;
+	}
+
+	.content-container {
+		margin-top: 0 !important;
+	}
+	
+	#my-pro-container {
+		padding-left: 6.5em !important;
+		padding-right: 6.5em !important;
+	}
+}
+
+/* Preloader */
+
+.no-js #loader {
+	display: none;
+}
+
+.js #loader {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 0;
+}
+
+.se-pre-con {
+	text-align: center;
+	display: table;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: #000000;
+}
+
+.se-pre-con label {
+	display: table-cell;
+	vertical-align: middle;
+	font-family: monospace;
+	font-size: 1.9em;
+	text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
