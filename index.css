@@ -250,15 +250,14 @@ html, body {
 
 @media ( max-width : 768px) {
 	#wrapper-overlay h1 {
-		font-size: 5em;
+		font-size: 5em !important;
 	}
 	
 	#wrapper-overlay h1 span {
-		font-size: 20px;
+		font-size: 20px !important;
 	}
-	
-	#wrapper-overlay h1 span {
-		font-size: 25px;
+	.projects {
+		min-height: 17em !important;
 	}
 }
 
@@ -276,15 +275,6 @@ html, body {
 	#my-pro-container {
 		padding-left: 6.5em !important;
 		padding-right: 6.5em !important;
-	}
-}
-
-@media ( max-width : 768px) {
-	.projects {
-		min-height: 17em !important;
-	}
-	#wrapper-overlay h1 {
-		font-size: 5.8em !important;
 	}
 }
 
