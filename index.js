@@ -59,6 +59,7 @@ $(window).on('load', function() {
 					'opacity' : '1'
 				}, 400, function() {
 					$('html, body').css('overflow-y' , 'auto');
+					$('#play').click();
 				});
 			});
 		});
