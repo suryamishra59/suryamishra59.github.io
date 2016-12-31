@@ -1,0 +1,180 @@
+/**
+ *	@author: Surya Deep Mishra
+ */
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+ #wrapper {
+ 	height: 100%;
+	width: 100%;
+ 	background: url("bg.jpg") no-repeat center center;
+ 	background-size: 100% 200%;
+ }
+
+ #top-stop, #bottom-stop {
+ 	width: 100%;
+ 	height: 1em;
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	left: 0;
+ 	margin: 0 auto;
+ 	box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.6);
+ 	background: url("moving.gif") repeat transparent;
+ 	background-repeat-y: no-repeat;
+ }
+
+ #bottom-stop {
+ 	top: auto;
+ 	bottom: 0;
+ 	right: 0;
+ 	left: 0;
+ 	transform: rotateY(180deg);
+ }
+
+ #remarks {
+ 	width: 100%;
+ 	height: 2em;
+ 	padding: 1em;
+ 	position: absolute;
+ 	top: 45%;
+ 	text-align: center;
+ }
+
+ #remarks h2 {
+ 	font-family: Consolas;
+ 	font-weight: bold;
+ 	font-size: 1.5em;
+ 	color: antiquewhite;
+ 	position: absolute;
+	top: 0;
+	bottom: 0;
+ 	left: 0;
+ 	right: 0;
+ 	animation: glow 1.5s linear infinite alternate;
+ }
+
+  #ball-l, #ball-r {
+ 	height: 5em;
+ 	width: 5.6em;
+ 	left: 0;
+ 	top: -40%;
+ 	z-index: 3;
+ 	bottom: 0;
+ 	margin: auto;
+ 	border-radius: 50%;
+ 	position: absolute;
+ 	transform: rotate(0deg);
+ 	animation: dribble-left 5s linear infinite alternate;
+ }
+
+ #ball-bottom-l, #ball-bottom-r {
+ 	height: 5em;
+ 	width: 5.6em;
+ 	left: 0;
+ 	top: 0%;
+ 	z-index: 3;
+ 	bottom: -80%;
+ 	margin: auto;
+ 	border-radius: 50%;
+ 	position: absolute;
+ 	transform: rotate(0deg);
+ 	animation: dribble-bottom-left 5s linear infinite alternate;
+ }
+
+ #ball-r {
+ 	left: auto;
+ 	right: 0;
+ 	bottom: 0;
+ 	animation: dribble-right 5s linear infinite alternate;
+ }
+
+ #ball-bottom-r {
+ 	left: auto;
+ 	right: 0;
+ 	top: 0%;
+ 	bottom: -80%;
+ 	animation: dribble-bottom-right 5s linear infinite alternate;
+ }
+
+ #ball-l:before,  #ball-r:before, #ball-bottom-l:before, #ball-bottom-r:before {
+	content: "";
+	position: absolute;
+	width: 5.6em;
+	height: 5em;
+ 	left: 0;
+ 	top: 0;
+ 	bottom: 0;
+	z-index: -1;
+	background: url("ball.png") no-repeat;
+	background-size: 100% 100%;
+	transform: rotate(45deg);
+}
+
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 14px;
+    line-height: 24px;
+    position: fixed;
+    color: #FFFFFF;
+    user-select: none;
+    z-index: 1000;
+}
+.snowflake:hover {
+    cursor: default;
+}
+
+ @keyframes dribble-left {
+    0%   {top: -30%; transform: rotate(0deg);}
+    20%   {top: 70%; left: 20%; transform: rotate(360deg);}
+    40%   {top: -30%; left: 40%; transform: rotate(0deg);}
+    60%   {top: 70%; left: 60%; transform: rotate(360deg);}
+    80%   {top: -30%; left: 80%; transform: rotate(0deg);}
+    100%   {top: 70%; left: 100%; transform: rotate(360deg);}
+}
+
+ @keyframes dribble-right {
+    0%   {top: -30%; transform: rotate(0deg);}
+    20%   {top: 70%; right: 20%; transform: rotate(360deg);}
+    40%   {top: -30%; right: 40%; transform: rotate(0deg);}
+    60%   {top: 70%; right: 60%; transform: rotate(360deg);}
+    80%   {top: -30%; right: 80%; transform: rotate(0deg);}
+    100%   {top: 70%; right: 100%; transform: rotate(360deg);}
+}
+
+
+ @keyframes dribble-bottom-right {
+    0%   {bottom: -80%; transform: rotate(0deg);}
+    20%   {bottom: 70%; right: 20%; transform: rotate(360deg);}
+    40%   {bottom: -80%; right: 40%; transform: rotate(0deg);}
+    60%   {bottom: 70%; right: 60%; transform: rotate(360deg);}
+    80%   {bottom: -80%; right: 80%; transform: rotate(0deg);}
+    100%   {bottom: 70%; right: 100%; transform: rotate(360deg);}
+}
+
+
+ @keyframes dribble-bottom-left {
+    0%   {bottom: -80%; transform: rotate(0deg);}
+    20%   {bottom: 70%; left: 20%; transform: rotate(360deg);}
+    40%   {bottom: -80%; left: 40%; transform: rotate(0deg);}
+    60%   {bottom: 70%; left: 60%; transform: rotate(360deg);}
+    80%   {bottom: -80%; left: 80%; transform: rotate(0deg);}
+    100%   {bottom: 70%; left: 100%; transform: rotate(360deg);}
+}
+
+ @keyframes glow {
+    0%   {}
+    50%   {text-shadow: 0px 0px 10px white, 0px 0px 10px white; font-size: 1.8em}
+    100%   {text-shadow: 0px 0px 20px yellow, 0px 0px 20px yellow; font-size: 2.2em}
+}
