@@ -34,7 +34,9 @@ html, body {
  	bottom: 0;
  	right: 0;
  	left: 0;
- 	transform: rotateY(180deg);
+ 	-ms-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
  }
 
  #remarks {
@@ -57,6 +59,7 @@ html, body {
  	left: 0;
  	right: 0;
  	animation: glow 1.5s linear infinite alternate;
+	-webkit-animation: glow 1.5s linear infinite alternate;
  }
 
   #ball-l, #ball-r {
@@ -70,7 +73,10 @@ html, body {
  	border-radius: 50%;
  	position: absolute;
  	transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
  	animation: dribble-left 5s linear infinite alternate;
+	-webkit-animation: dribble-left 5s linear infinite alternate;
  }
 
  #ball-bottom-l, #ball-bottom-r {
@@ -84,7 +90,10 @@ html, body {
  	border-radius: 50%;
  	position: absolute;
  	transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
  	animation: dribble-bottom-left 5s linear infinite alternate;
+	-webkit-animation: dribble-bottom-left 5s linear infinite alternate;
  }
 
  #ball-r {
@@ -92,6 +101,7 @@ html, body {
  	right: 0;
  	bottom: 0;
  	animation: dribble-right 5s linear infinite alternate;
+	-webkit-animation: dribble-right 5s linear infinite alternate;
  }
 
  #ball-bottom-r {
@@ -100,6 +110,7 @@ html, body {
  	top: 0%;
  	bottom: -80%;
  	animation: dribble-bottom-right 5s linear infinite alternate;
+	-webkit-animation: dribble-bottom-right 5s linear infinite alternate;
  }
 
  #ball-l:before,  #ball-r:before, #ball-bottom-l:before, #ball-bottom-r:before {
@@ -114,6 +125,8 @@ html, body {
 	background: url("ball.png") no-repeat;
 	background-size: 100% 100%;
 	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 }
 
 #snowflakeContainer {
@@ -121,6 +134,7 @@ html, body {
     left: 0px;
     top: 0px;
 }
+
 .snowflake {
     padding-left: 15px;
     font-family: Cambria, Georgia, serif;
@@ -131,49 +145,95 @@ html, body {
     user-select: none;
     z-index: 1000;
 }
+
 .snowflake:hover {
     cursor: default;
 }
 
  @keyframes dribble-left {
-    0%   {top: -30%; transform: rotate(0deg);}
-    20%   {top: 70%; left: 20%; transform: rotate(360deg);}
-    40%   {top: -30%; left: 40%; transform: rotate(0deg);}
-    60%   {top: 70%; left: 60%; transform: rotate(360deg);}
-    80%   {top: -30%; left: 80%; transform: rotate(0deg);}
-    100%   {top: 70%; left: 100%; transform: rotate(360deg);}
+    0%   {top: -30%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    20%   {top: 70%; left: 20%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    40%   {top: -30%; left: 40%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    60%   {top: 70%; left: 60%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    80%   {top: -30%; left: 80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    100%   {top: 70%; left: 100%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
 }
 
  @keyframes dribble-right {
     0%   {top: -30%; transform: rotate(0deg);}
-    20%   {top: 70%; right: 20%; transform: rotate(360deg);}
-    40%   {top: -30%; right: 40%; transform: rotate(0deg);}
-    60%   {top: 70%; right: 60%; transform: rotate(360deg);}
-    80%   {top: -30%; right: 80%; transform: rotate(0deg);}
-    100%   {top: 70%; right: 100%; transform: rotate(360deg);}
+    20%   {top: 70%; right: 20%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    40%   {top: -30%; right: 40%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    60%   {top: 70%; right: 60%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    80%   {top: -30%; right: 80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    100%   {top: 70%; right: 100%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
 }
 
 
  @keyframes dribble-bottom-right {
-    0%   {bottom: -80%; transform: rotate(0deg);}
-    20%   {bottom: 70%; right: 20%; transform: rotate(360deg);}
-    40%   {bottom: -80%; right: 40%; transform: rotate(0deg);}
-    60%   {bottom: 70%; right: 60%; transform: rotate(360deg);}
-    80%   {bottom: -80%; right: 80%; transform: rotate(0deg);}
-    100%   {bottom: 70%; right: 100%; transform: rotate(360deg);}
+    0%   {bottom: -80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    20%   {bottom: 70%; right: 20%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    40%   {bottom: -80%; right: 40%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    60%   {bottom: 70%; right: 60%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    80%   {bottom: -80%; right: 80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    100%   {bottom: 70%; right: 100%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
 }
 
 
  @keyframes dribble-bottom-left {
-    0%   {bottom: -80%; transform: rotate(0deg);}
-    20%   {bottom: 70%; left: 20%; transform: rotate(360deg);}
-    40%   {bottom: -80%; left: 40%; transform: rotate(0deg);}
-    60%   {bottom: 70%; left: 60%; transform: rotate(360deg);}
-    80%   {bottom: -80%; left: 80%; transform: rotate(0deg);}
-    100%   {bottom: 70%; left: 100%; transform: rotate(360deg);}
+    0%   {bottom: -80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    20%   {bottom: 70%; left: 20%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    40%   {bottom: -80%; left: 40%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    60%   {bottom: 70%; left: 60%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    80%   {bottom: -80%; left: 80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    100%   {bottom: 70%; left: 100%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
 }
 
  @keyframes glow {
+    0%   {}
+    50%   {text-shadow: 0px 0px 10px white, 0px 0px 10px white; font-size: 1.8em}
+    100%   {text-shadow: 0px 0px 20px yellow, 0px 0px 20px yellow; font-size: 2.2em}
+}
+
+/* For Safari*/
+@-webkit-keyframes dribble-left {
+    0%   {top: -30%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    20%   {top: 70%; left: 20%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    40%   {top: -30%; left: 40%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    60%   {top: 70%; left: 60%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    80%   {top: -30%; left: 80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    100%   {top: 70%; left: 100%; transform: rotate(360deg);; -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+}
+
+ @-webkit-keyframes dribble-right {
+    0%   {top: -30%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    20%   {top: 70%; right: 20%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    40%   {top: -30%; right: 40%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    60%   {top: 70%; right: 60%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    80%   {top: -30%; right: 80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    100%   {top: 70%; right: 100%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+}
+
+
+ @-webkit-keyframes dribble-bottom-right {
+    0%   {bottom: -80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    20%   {bottom: 70%; right: 20%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    40%   {bottom: -80%; right: 40%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    60%   {bottom: 70%; right: 60%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    80%   {bottom: -80%; right: 80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    100%   {bottom: 70%; right: 100%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+}
+
+
+ @-webkit-keyframes dribble-bottom-left {
+    0%   {bottom: -80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    20%   {bottom: 70%; left: 20%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    40%   {bottom: -80%; left: 40%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    60%   {bottom: 70%; left: 60%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+    80%   {bottom: -80%; left: 80%; transform: rotate(0deg); -ms-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+    100%   {bottom: 70%; left: 100%; transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+}
+
+ @-webkit-keyframes glow {
     0%   {}
     50%   {text-shadow: 0px 0px 10px white, 0px 0px 10px white; font-size: 1.8em}
     100%   {text-shadow: 0px 0px 20px yellow, 0px 0px 20px yellow; font-size: 2.2em}
