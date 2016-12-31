@@ -164,8 +164,8 @@ html, body {
 	background-size: 100% 100%;
 }
 
-#calculator-img {
-	background: url(images/calculator.png) no-repeat center center;
+#balls-img {
+	background: url(images/bouncing-balls.png) no-repeat center center;
 	background-size: 100% 100%;
 }
 
