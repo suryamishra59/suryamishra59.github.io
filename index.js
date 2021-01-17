@@ -4,6 +4,6 @@
 
 $(document).ready(function() {
 
-location.href = 'www.madebysurya.com';
+//location.href = 'www.madebysurya.com';
 	
 });
